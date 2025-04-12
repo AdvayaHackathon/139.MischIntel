@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL YATRA - Your Indian Travel Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+ 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    
+
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <header id="header" class="sticky top-0 z-50"></header>
+
+
+    <section id="hero" class="relative"></section>
+
+
+    <section id="features" class="py-12 bg-white"></section>
+
+    <section id="translator" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Language Translator</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Speak or type in your language and get instant translations to help you communicate during your travels in India.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+             
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold">Your Language</h3>
+                            <select id="source-language" class="border border-gray-300 rounded px-3 py-1 text-sm">
+                                <option value="en-US">English (US)</option>
+                                <option value="fr-FR">French</option>
+                                <option value="de-DE">German</option>
+                                <option value="es-ES">Spanish</option>
+                                <option value="ja-JP">Japanese</option>
+                                <option value="zh-CN">Chinese (Simplified)</option>
+                                <option value="ru-RU">Russian</option>
+                                <option value="pt-BR">Portuguese</option>
+                                <option value="ar-SA">Arabic</option>
+                                <option value="ko-KR">Korean</option>
+                            </select>
+                        </div>
+                        
+                        <textarea id="source-text" class="w-full h-32 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type or speak your text here..."></textarea>
+                        
+                        <div class="flex space-x-2">
+                            <button id="start-recording" class="flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd" />
+                                </svg>
+                                Start Speaking
+                            </button>
+                            <button id="stop-recording" class="flex items-center justify-center bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clip-rule="evenodd" />
+                                </svg>
+                                Stop Recording
+                            </button>
+                            <button id="translate-button" class="flex items-center justify-center bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd" />
+                                </svg>
+                                Translate
+                            </button>
+                        </div>
+                        <div id="recording-status" class="text-sm text-gray-500 hidden">Recording... Speak now</div>
+                    </div>
+                    
+                
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold">Translation</h3>
+                            <select id="target-language" class="border border-gray-300 rounded px-3 py-1 text-sm">
+                                <option value="hi">Hindi</option>
+                                <option value="bn">Bengali</option>
+                                <option value="te">Telugu</option>
+                                <option value="ta">Tamil</option>
+                                <option value="mr">Marathi</option>
+                                <option value="gu">Gujarati</option>
+                                <option value="kn">Kannada</option>
+                                <option value="ml">Malayalam</option>
+                                <option value="pa">Punjabi</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                        
+                        <div id="translation-result" class="w-full h-32 p-3 border border-gray-300 rounded-md bg-gray-50 overflow-auto"></div>
+                        
+                        <div class="flex space-x-2">
+                            <button id="copy-translation" class="flex items-center justify-center bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                                    <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+                                </svg>
+                                Copy
+                            </button>
+                            <button id="speak-translation" class="flex items-center justify-center bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
+                                </svg>
+                                Speak
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold mb-4">Common Phrases</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <button class="phrase-button text-left p-2 border border-gray-300 rounded-md hover:bg-gray-50">Hello, how are you?</button>
+                        <button class="phrase-button text-left p-2 border border-gray-300 rounded-md hover:bg-gray-50">Where is the bathroom?</button>
+                        <button class="phrase-button text-left p-2 border border-gray-300 rounded-md hover:bg-gray-50">How much does this cost?</button>
+                        <button class="phrase-button text-left p-2 border border-gray-300 rounded-md hover:bg-gray-50">I need help, please.</button>
+                        <button class="phrase-button text-left p-2 border border-gray-300 rounded-md hover:bg-gray-50">Thank you very much.</button>
+                        <button class="phrase-button text-left p-2 border border-gray-300 rounded-md hover:bg-gray-50">Can you recommend a good restaurant?</button>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-sm text-gray-500">
+                    <p>Note: Speech recognition works best in a quiet environment. Speak clearly for better results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="safety-alerts" class="py-12 bg-white"></section>
+
+    <section id="transport" class="py-12 bg-gray-50"></section>
+
+    <section id="itinerary" class="py-12 bg-white"></section>
+
+   
+    <section id="clean-places" class="py-12 bg-gray-50"></section>
+
+    <section id="cultural-guide" class="py-12 bg-white"></section>
+
+    <section id="food-culture" class="py-12 bg-gray-50"></section>
+
+ 
+    <section id="offline-mode" class="py-12 bg-gray-50"></section>
+
+    <section id="emergency" class="py-12 bg-white"></section>
+
+   
+    <section id="events" class="py-12 bg-gray-50"></section>
+
+    <section id="payment-tips" class="py-12 bg-white"></section>
+
+
+    <footer id="footer" class="bg-gray-800 text-white py-8"></footer>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/translator.js"></script>
+    <script src="js/safety-alerts.js"></script>
+    <script src="js/transport.js"></script>
+    <script src="js/itinerary.js"></script>
+    
+    <script src="js/cultural-guide.js"></script>
+    <script src="js/food-culture.js"></script>
+    
+    <script src="js/emergency.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/payment-tips.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/explore-map.js"></script>
+    <script src="js/button-initializer.js"></script>
+    
+
+</body>
+</html>
