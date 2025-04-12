@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+  <!-- Bus Body -->
+  <rect x="40" y="120" width="560" height="200" rx="20" fill="#DC2626"/>
+  <rect x="40" y="120" width="560" height="60" rx="20" fill="#B91C1C"/>
+  
+  <!-- Windows -->
+  <rect x="80" y="140" width="60" height="40" rx="5" fill="#DBEAFE"/>
+  <rect x="160" y="140" width="60" height="40" rx="5" fill="#DBEAFE"/>
+  <rect x="240" y="140" width="60" height="40" rx="5" fill="#DBEAFE"/>
+  <rect x="320" y="140" width="60" height="40" rx="5" fill="#DBEAFE"/>
+  <rect x="400" y="140" width="60" height="40" rx="5" fill="#DBEAFE"/>
+  <rect x="480" y="140" width="60" height="40" rx="5" fill="#DBEAFE"/>
+  
+  <!-- Lower Windows -->
+  <rect x="80" y="200" width="60" height="80" rx="5" fill="#DBEAFE"/>
+  <rect x="160" y="200" width="60" height="80" rx="5" fill="#DBEAFE"/>
+  <rect x="320" y="200" width="60" height="80" rx="5" fill="#DBEAFE"/>
+  <rect x="400" y="200" width="60" height="80" rx="5" fill="#DBEAFE"/>
+  <rect x="480" y="200" width="60" height="80" rx="5" fill="#DBEAFE"/>
+  
+  <!-- Door -->
+  <rect x="240" y="200" width="60" height="120" fill="#B91C1C"/>
+  <rect x="250" y="210" width="40" height="110" fill="#DBEAFE"/>
+  <line x1="270" y1="210" x2="270" y2="320" stroke="#B91C1C" stroke-width="2"/>
+  
+  <!-- Wheels -->
+  <circle cx="140" cy="320" r="40" fill="#333"/>
+  <circle cx="140" cy="320" r="20" fill="#666"/>
+  <circle cx="500" cy="320" r="40" fill="#333"/>
+  <circle cx="500" cy="320" r="20" fill="#666"/>
+  
+  <!-- Headlights -->
+  <circle cx="60" cy="300" r="10" fill="#FFFF00"/>
+  <circle cx="580" cy="300" r="10" fill="#FF0000"/>
+  
+  <!-- Bus Sign -->
+  <rect x="260" y="90" width="120" height="30" rx="5" fill="#FFFFFF"/>
+  <text x="320" y="112" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#DC2626">LOCAL BUS</text>
+  
+  <!-- Indian Flag Colors Strip -->
+  <rect x="40" y="180" width="560" height="10" fill="#FF9933"/>
+  <rect x="40" y="190" width="560" height="10" fill="#FFFFFF"/>
+  <rect x="40" y="200" width="560" height="10" fill="#138808"/>
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+  <!-- Car Body -->
+  <path fill="#8B5CF6" d="M544 192h-16L419.22 56.02A64.025 64.025 0 0 0 369.24 32H155.33c-26.17 0-49.7 15.93-59.42 40.23L48 192H32C14.33 192 0 206.33 0 224v32c0 17.67 14.33 32 32 32h32v160c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-48h256v48c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V288h32c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+  
+  <!-- Windows -->
+  <path fill="#EDE9FE" d="M96 224c-17.75 0-32 14.25-32 32s14.25 32 32 32 32-14.25 32-32-14.25-32-32-32zm448 0c-17.75 0-32 14.25-32 32s14.25 32 32 32 32-14.25 32-32-14.25-32-32-32zm-48-96H144l55.75-88.25C203.75 33.25 210.25 32 216 32h208c5.75 0 12.25 1.25 16.25 7.75L496 128z"/>
+  
+  <!-- Wheels -->
+  <circle cx="144" cy="384" r="48" fill="#333"/>
+  <circle cx="144" cy="384" r="24" fill="#666"/>
+  <circle cx="496" cy="384" r="48" fill="#333"/>
+  <circle cx="496" cy="384" r="24" fill="#666"/>
+  
+  <!-- Headlights -->
+  <circle cx="96" cy="224" r="16" fill="#FFFFFF"/>
+  <circle cx="544" cy="224" r="16" fill="#FFFFFF"/>
+  
+  <!-- Rideshare App Icon -->
+  <circle cx="320" cy="120" r="40" fill="#FFFFFF"/>
+  <g transform="translate(290, 90) scale(0.06)">
+    <!-- Smartphone Icon -->
+    <path fill="#8B5CF6" d="M464 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-16 352c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V128c0-8.8 7.2-16 16-16h352c8.8 0 16 7.2 16 16v288z"/>
+    <!-- Location Pin -->
+    <path fill="#8B5CF6" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" transform="translate(128, 50) scale(0.5)"/>
+  </g>
+  
+  <!-- People Icons -->
+  <circle cx="240" cy="160" r="20" fill="#FFFFFF"/>
+  <path fill="#FFFFFF" d="M230 180 L250 180 L255 200 L225 200 Z"/>
+  
+  <circle cx="360" cy="160" r="20" fill="#FFFFFF"/>
+  <path fill="#FFFFFF" d="M350 180 L370 180 L375 200 L345 200 Z"/>
+  
+  <!-- Mobile App Rating Stars -->
+  <g transform="translate(280, 240) scale(0.5)">
+    <polygon points="10,0 13,6 20,7 15,12 16,20 10,16 4,20 5,12 0,7 7,6" fill="#FFD700" transform="translate(0, 0)"/>
+    <polygon points="10,0 13,6 20,7 15,12 16,20 10,16 4,20 5,12 0,7 7,6" fill="#FFD700" transform="translate(25, 0)"/>
+    <polygon points="10,0 13,6 20,7 15,12 16,20 10,16 4,20 5,12 0,7 7,6" fill="#FFD700" transform="translate(50, 0)"/>
+    <polygon points="10,0 13,6 20,7 15,12 16,20 10,16 4,20 5,12 0,7 7,6" fill="#FFD700" transform="translate(75, 0)"/>
+    <polygon points="10,0 13,6 20,7 15,12 16,20 10,16 4,20 5,12 0,7 7,6" fill="#FFD700" transform="translate(100, 0)"/>
+  </g>
+</svg>

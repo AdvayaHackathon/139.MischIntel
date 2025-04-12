@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+  <!-- Taxi Body -->
+  <path fill="#FFD700" d="M544 192h-16L419.22 56.02A64.025 64.025 0 0 0 369.24 32H155.33c-26.17 0-49.7 15.93-59.42 40.23L48 192H32C14.33 192 0 206.33 0 224v32c0 17.67 14.33 32 32 32h32v160c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-48h256v48c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V288h32c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+  
+  <!-- Windows -->
+  <path fill="#87CEEB" d="M96 224c-17.75 0-32 14.25-32 32s14.25 32 32 32 32-14.25 32-32-14.25-32-32-32zm448 0c-17.75 0-32 14.25-32 32s14.25 32 32 32 32-14.25 32-32-14.25-32-32-32zm-48-96H144l55.75-88.25C203.75 33.25 210.25 32 216 32h208c5.75 0 12.25 1.25 16.25 7.75L496 128z"/>
+  
+  <!-- Wheels -->
+  <circle cx="144" cy="384" r="48" fill="#333"/>
+  <circle cx="144" cy="384" r="24" fill="#666"/>
+  <circle cx="496" cy="384" r="48" fill="#333"/>
+  <circle cx="496" cy="384" r="24" fill="#666"/>
+  
+  <!-- Taxi Sign -->
+  <rect x="288" y="128" width="64" height="24" rx="8" fill="#333"/>
+  <text x="320" y="146" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#FFD700">TAXI</text>
+  
+  <!-- Headlights -->
+  <circle cx="96" cy="224" r="16" fill="#FFFFFF"/>
+  <circle cx="544" cy="224" r="16" fill="#FFFFFF"/>
+  
+  <!-- Checkerboard Pattern -->
+  <rect x="240" y="192" width="20" height="20" fill="#000000"/>
+  <rect x="260" y="192" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="280" y="192" width="20" height="20" fill="#000000"/>
+  <rect x="300" y="192" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="320" y="192" width="20" height="20" fill="#000000"/>
+  <rect x="340" y="192" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="360" y="192" width="20" height="20" fill="#000000"/>
+  <rect x="380" y="192" width="20" height="20" fill="#FFFFFF"/>
+  
+  <rect x="240" y="212" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="260" y="212" width="20" height="20" fill="#000000"/>
+  <rect x="280" y="212" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="300" y="212" width="20" height="20" fill="#000000"/>
+  <rect x="320" y="212" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="340" y="212" width="20" height="20" fill="#000000"/>
+  <rect x="360" y="212" width="20" height="20" fill="#FFFFFF"/>
+  <rect x="380" y="212" width="20" height="20" fill="#000000"/>
+</svg>

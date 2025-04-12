@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#2C0A37"/>
+  
+  <!-- Decorative Border -->
+  <rect x="20" y="20" width="760" height="560" fill="none" stroke="#FFD700" stroke-width="4" rx="20"/>
+  
+  <!-- Diya (Oil Lamp) 1 -->
+  <g transform="translate(150, 300)">
+    <!-- Lamp Base -->
+    <path d="M-50,0 C-30,20 30,20 50,0 L40,50 L-40,50 Z" fill="#CD7F32"/>
+    <!-- Flame -->
+    <path d="M0,-10 C5,-30 15,-40 0,-60 C-15,-40 -5,-30 0,-10 Z" fill="#FFA500">
+      <animate attributeName="d" 
+               values="M0,-10 C5,-30 15,-40 0,-60 C-15,-40 -5,-30 0,-10 Z;
+                       M0,-10 C10,-30 5,-40 0,-55 C-5,-40 -10,-30 0,-10 Z;
+                       M0,-10 C5,-30 15,-40 0,-60 C-15,-40 -5,-30 0,-10 Z"
+               dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <ellipse cx="0" cy="-10" rx="10" ry="5" fill="#FFFF00">
+      <animate attributeName="rx" values="10;12;10" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="5;6;5" dur="1.5s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Diya (Oil Lamp) 2 -->
+  <g transform="translate(400, 350)">
+    <!-- Lamp Base -->
+    <path d="M-60,0 C-40,25 40,25 60,0 L50,60 L-50,60 Z" fill="#CD7F32"/>
+    <!-- Flame -->
+    <path d="M0,-15 C8,-40 20,-55 0,-80 C-20,-55 -8,-40 0,-15 Z" fill="#FFA500">
+      <animate attributeName="d" 
+               values="M0,-15 C8,-40 20,-55 0,-80 C-20,-55 -8,-40 0,-15 Z;
+                       M0,-15 C15,-40 8,-55 0,-75 C-8,-55 -15,-40 0,-15 Z;
+                       M0,-15 C8,-40 20,-55 0,-80 C-20,-55 -8,-40 0,-15 Z"
+               dur="1.2s" repeatCount="indefinite"/>
+    </path>
+    <ellipse cx="0" cy="-15" rx="15" ry="7" fill="#FFFF00">
+      <animate attributeName="rx" values="15;17;15" dur="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="7;8;7" dur="1.2s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Diya (Oil Lamp) 3 -->
+  <g transform="translate(650, 300)">
+    <!-- Lamp Base -->
+    <path d="M-50,0 C-30,20 30,20 50,0 L40,50 L-40,50 Z" fill="#CD7F32"/>
+    <!-- Flame -->
+    <path d="M0,-10 C5,-30 15,-40 0,-60 C-15,-40 -5,-30 0,-10 Z" fill="#FFA500">
+      <animate attributeName="d" 
+               values="M0,-10 C5,-30 15,-40 0,-60 C-15,-40 -5,-30 0,-10 Z;
+                       M0,-10 C10,-30 5,-40 0,-55 C-5,-40 -10,-30 0,-10 Z;
+                       M0,-10 C5,-30 15,-40 0,-60 C-15,-40 -5,-30 0,-10 Z"
+               dur="1.8s" repeatCount="indefinite"/>
+    </path>
+    <ellipse cx="0" cy="-10" rx="10" ry="5" fill="#FFFF00">
+      <animate attributeName="rx" values="10;12;10" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="5;6;5" dur="1.8s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Rangoli (Decorative Pattern) -->
+  <g transform="translate(400, 200)">
+    <!-- Outer Circle -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#FF5722" stroke-width="3"/>
+    <!-- Inner Circle -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#4CAF50" stroke-width="3"/>
+    <!-- Pattern Elements -->
+    <g stroke-width="3" fill="none">
+      <!-- Petals -->
+      <path d="M0,-80 C30,-60 30,-30 0,-20 C-30,-30 -30,-60 0,-80" stroke="#FF9800"/>
+      <path d="M56,-56 C70,-20 50,0 28,-14 C14,-40 30,-70 56,-56" stroke="#E91E63"/>
+      <path d="M80,0 C60,30 30,30 20,0 C30,-30 60,-30 80,0" stroke="#FF9800"/>
+      <path d="M56,56 C20,70 0,50 14,28 C40,14 70,30 56,56" stroke="#E91E63"/>
+      <path d="M0,80 C-30,60 -30,30 0,20 C30,30 30,60 0,80" stroke="#FF9800"/>
+      <path d="M-56,56 C-70,20 -50,0 -28,14 C-14,40 -30,70 -56,56" stroke="#E91E63"/>
+      <path d="M-80,0 C-60,-30 -30,-30 -20,0 C-30,30 -60,30 -80,0" stroke="#FF9800"/>
+      <path d="M-56,-56 C-20,-70 0,-50 -14,-28 C-40,-14 -70,-30 -56,-56" stroke="#E91E63"/>
+    </g>
+    <!-- Center Decoration -->
+    <circle cx="0" cy="0" r="15" fill="#FFC107"/>
+    <circle cx="0" cy="0" r="10" fill="#FF5722"/>
+    <circle cx="0" cy="0" r="5" fill="#FFEB3B"/>
+  </g>
+  
+  <!-- Fireworks -->
+  <g>
+    <!-- Firework 1 -->
+    <g transform="translate(200, 150)">
+      <circle cx="0" cy="0" r="3" fill="#FF5252"/>
+      <g stroke="#FF5252" stroke-width="2">
+        <line x1="0" y1="-30" x2="0" y2="-10"/>
+        <line x1="21" y1="-21" x2="7" y2="-7"/>
+        <line x1="30" y1="0" x2="10" y2="0"/>
+        <line x1="21" y1="21" x2="7" y2="7"/>
+        <line x1="0" y1="30" x2="0" y2="10"/>
+        <line x1="-21" y1="21" x2="-7" y2="7"/>
+        <line x1="-30" y1="0" x2="-10" y2="0"/>
+        <line x1="-21" y1="-21" x2="-7" y2="-7"/>
+      </g>
+    </g>
+    
+    <!-- Firework 2 -->
+    <g transform="translate(600, 150)">
+      <circle cx="0" cy="0" r="3" fill="#8C9EFF"/>
+      <g stroke="#8C9EFF" stroke-width="2">
+        <line x1="0" y1="-25" x2="0" y2="-8"/>
+        <line x1="18" y1="-18" x2="6" y2="-6"/>
+        <line x1="25" y1="0" x2="8" y2="0"/>
+        <line x1="18" y1="18" x2="6" y2="6"/>
+        <line x1="0" y1="25" x2="0" y2="8"/>
+        <line x1="-18" y1="18" x2="-6" y2="6"/>
+        <line x1="-25" y1="0" x2="-8" y2="0"/>
+        <line x1="-18" y1="-18" x2="-6" y2="-6"/>
+      </g>
+    </g>
+    
+    <!-- Firework 3 -->
+    <g transform="translate(400, 100)">
+      <circle cx="0" cy="0" r="3" fill="#69F0AE"/>
+      <g stroke="#69F0AE" stroke-width="2">
+        <line x1="0" y1="-35" x2="0" y2="-12"/>
+        <line x1="25" y1="-25" x2="8" y2="-8"/>
+        <line x1="35" y1="0" x2="12" y2="0"/>
+        <line x1="25" y1="25" x2="8" y2="8"/>
+        <line x1="0" y1="35" x2="0" y2="12"/>
+        <line x1="-25" y1="25" x2="-8" y2="8"/>
+        <line x1="-35" y1="0" x2="-12" y2="0"/>
+        <line x1="-25" y1="-25" x2="-8" y2="-8"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Text -->
+  <text x="400" y="500" font-family="Arial" font-size="48" font-weight="bold" text-anchor="middle" fill="#FFD700">DIWALI</text>
+  <text x="400" y="540" font-family="Arial" font-size="24" text-anchor="middle" fill="#FFFFFF">Festival of Lights</text>
+</svg>

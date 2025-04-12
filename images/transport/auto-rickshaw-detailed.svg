@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+  <!-- Auto Rickshaw Body -->
+  <path fill="#FFD700" d="M64 104v88h96v-88H64zm224 0v88h96v-88h-96zm-64 0h-32v88h32v-88zm-128 0h-32v88h32v-88zm400 0h-32v88h32v-88zM0 104v208c0 8.8 7.2 16 16 16h48v64c0 17.7 14.3 32 32 32s32-14.3 32-32v-64h384v64c0 17.7 14.3 32 32 32s32-14.3 32-32v-64h48c8.8 0 16-7.2 16-16V104c0-39.8-32.2-72-72-72H72C32.2 32 0 64.2 0 104zm64 208h96v-88H64v88zm224 0h96v-88h-96v88zm-64 0h-32v-88h32v88zm-128 0h-32v-88h32v88zm400 0h-32v-88h32v88zm-64 0h-96v-88h96v88z"/>
+  
+  <!-- Wheels -->
+  <circle cx="96" cy="360" r="32" fill="#333"/>
+  <circle cx="96" cy="360" r="16" fill="#666"/>
+  <circle cx="544" cy="360" r="32" fill="#333"/>
+  <circle cx="544" cy="360" r="16" fill="#666"/>
+  <circle cx="320" cy="360" r="32" fill="#333"/>
+  <circle cx="320" cy="360" r="16" fill="#666"/>
+  
+  <!-- Roof -->
+  <path fill="#FF9900" d="M120 104H520c0 0 0-40-40-40H160C120 64 120 104 120 104z"/>
+  
+  <!-- Details -->
+  <rect x="280" y="140" width="80" height="40" fill="#333"/>
+  <rect x="120" y="180" width="400" height="20" fill="#FF5722"/>
+</svg>
